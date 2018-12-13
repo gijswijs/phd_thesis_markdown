@@ -1,0 +1,4 @@
+PWD c:/Repositories/phd_thesis_markdown/style
+INPUT C:/Users/Gijs van Dam/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT c:/Repositories/phd_thesis_markdown/style/template.tex
+OUTPUT template.log

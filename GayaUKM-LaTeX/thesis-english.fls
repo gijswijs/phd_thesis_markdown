@@ -1,0 +1,319 @@
+PWD c:/Repositories/phd_thesis_markdown/GayaUKM-LaTeX
+INPUT C:/Users/Gijs van Dam/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT c:/Repositories/phd_thesis_markdown/GayaUKM-LaTeX/thesis-english.tex
+OUTPUT thesis-english.log
+INPUT GayaUKM.cls
+INPUT GayaUKM.cls
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/memoir/memoir.cls
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/memoir/memoir.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/ifetex/ifetex.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/ifetex/ifetex.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/plain/ifetex/ifetex.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/memoir/mem12.clo
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/memoir/mem12.clo
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/etoolbox/etoolbox.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/etoolbox/etoolbox.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/textcase/textcase.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/textcase/textcase.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/translator/translator.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/translator/translator.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/switch.def
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/arabi/bblopts.cfg
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/arabi/bblopts.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/babel-english/english.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/babel-english/english.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/txtbabel.def
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/babel-malay/bahasam.ldf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/babel-malay/bahasam.ldf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/babel-malay/malay.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/inputenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/inputenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1200.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/newtxtext.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/newtxtext.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/fontaxes/fontaxes.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/fontaxes/fontaxes.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/xkeyval/xkeyval.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/xkeyval/xkvutils.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/textcomp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/textcomp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.dfu
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.dfu
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/newtxmath.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/newtxmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/centernot.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/centernot.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/generic/binhex/binhex.tex
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/generic/binhex/binhex.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/helvet.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/helvet.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/setspace/setspace.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/setspace/setspace.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-generic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-generic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/auxhook.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/auxhook.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/pd1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/pd1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/00miktex/hyperref.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/00miktex/hyperref.cfg
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/url/url.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/url/url.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/memoir/memhfixc.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/memoir/memhfixc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hpdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hpdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/bookmark.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/bookmark.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/bkm-pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/bkm-pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/enumitem/enumitem.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/enumitem/enumitem.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/natbib/natbib.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/natbib/natbib.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/t1ntxtlf.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/t1ntxtlf.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
+INPUT thesis-english.aux
+INPUT thesis-english.aux
+OUTPUT thesis-english.aux
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/omlntxmi.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/omlntxmi.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/untxexa.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/untxexa.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmr.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmr.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/lmsntxsy.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/lmsntxsy.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/lmxntxexx.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/lmxntxexx.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
+OUTPUT thesis-english.pdf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/context/base/supp-pdf.mkii
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/context/base/supp-pdf.mkii
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/ot1ntxtlf.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/ot1ntxtlf.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxmi.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxmi.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxmi7.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsy.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsy.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsy7.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/untxmia.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/untxmia.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/untxsym.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/untxsym.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsym.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsym.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsym.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/untxsyc.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/untxsyc.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT ack.tex
+INPUT ack.tex
+INPUT abstract-en.tex
+INPUT abstract-en.tex
+INPUT abstrak-ms.tex
+INPUT abstrak-ms.tex
+INPUT thesis-english.toc
+INPUT thesis-english.toc
+INPUT thesis-english.lof
+INPUT thesis-english.lof
+INPUT thesis-english.lot
+INPUT thesis-english.lot
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/newtx/ntxmi.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txmi.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/rntxmi.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/txfonts/txmi.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/rtxmi.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/rtxptmri.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/newtx/ntxmia.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txmia.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsyralt.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/zxlr-8r.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txsyc.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txr.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxexb.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/rtxmio.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txsyb.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/boondox/zxxrl7z.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/txfonts/txr.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/rtxptmr.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/rtxr.tfm
+INPUT symbols.tex
+INPUT symbols.tex
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/newtx/ntxmi.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txmi.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/rntxmi.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/txfonts/txmi.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/rtxmi.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/rtxptmri.tfm
+INPUT chap-intro.tex
+INPUT chap-intro.tex
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/newtx/ntxsy.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/txsys.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/newtx/ntxsy.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/txsys.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/newtx/ntxexx.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/txexs.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/ts1ntxtlf.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/tex/latex/newtx/ts1ntxtlf.fd
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
+INPUT green.png
+INPUT ./green.png
+INPUT ./green.png
+INPUT ./green.png
+INPUT ./green.png
+INPUT chap-fibonacci.tex
+INPUT chap-fibonacci.tex
+INPUT 314px-Liber-abbaci-magliab-f124r.jpg
+INPUT ./314px-Liber-abbaci-magliab-f124r.jpg
+INPUT ./314px-Liber-abbaci-magliab-f124r.jpg
+INPUT ./314px-Liber-abbaci-magliab-f124r.jpg
+INPUT ./314px-Liber-abbaci-magliab-f124r.jpg
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/newtx/ntxmia.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txmia.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxsyralt.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/zxlr-8r.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txsyc.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txr.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntxexb.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/rtxmio.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/txsyb.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/boondox/zxxrl7z.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/txfonts/txr.vf
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/rtxptmr.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/txfonts/rtxr.tfm
+INPUT FibonacciChamomile.png
+INPUT ./FibonacciChamomile.png
+INPUT ./FibonacciChamomile.png
+INPUT ./FibonacciChamomile.png
+INPUT ./FibonacciChamomile.png
+INPUT chap-goldenratio.tex
+INPUT chap-goldenratio.tex
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
+INPUT 220px-Golden-ratio-line.png
+INPUT ./220px-Golden-ratio-line.png
+INPUT ./220px-Golden-ratio-line.png
+INPUT ./220px-Golden-ratio-line.png
+INPUT ./220px-Golden-ratio-line.png
+INPUT SimilarGoldenRectangles.png
+INPUT ./SimilarGoldenRectangles.png
+INPUT ./SimilarGoldenRectangles.png
+INPUT ./SimilarGoldenRectangles.png
+INPUT ./SimilarGoldenRectangles.png
+INPUT thesis-english.bbl
+INPUT thesis-english.bbl
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
+INPUT app-details.tex
+INPUT app-details.tex
+INPUT app-code.tex
+INPUT app-code.tex
+OUTPUT thesis-english.toc
+OUTPUT thesis-english.lof
+OUTPUT thesis-english.lot
+INPUT thesis-english.aux
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/tex-gyre/q-ts1.enc
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
+INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/tex-gyre/qtmb.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/tex-gyre/qtmb.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/tex-gyre/qtmr.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/tex-gyre/qtmr.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/tex-gyre/qtmri.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/tex-gyre/qtmri.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxmi.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxmi.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txexs.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txexs.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb
+INPUT C:/Users/Gijs van Dam/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
