@@ -3,32 +3,35 @@ This is the Latex-heavy title page.
 People outside UCL may want to remove the header logo 
 and add the centred logo
 -->
-
 \begin{titlepage}
     \begin{center}
 
-        \vspace*{2.5cm}
+        \vspace*{1.5cm}
         
         \huge
-        De-anonymization of data in decentralized path-based transaction networks
+        De-anonymization of Bitcoin Transactions in Decentralized, Trustless Payment Channel Networks 
         
-        \vspace{1.5cm}
+        \vspace{1cm}
         
         \Large
-        Gijs van Dam
+        Gijs van Dam\
+        P95677
 
-        \vspace{1.5cm}
+        \vspace{1cm}
 
-        \normalsize
+        \Large
         Research proposal
         
         \vfill
         
         \normalsize
+        2018, Semester I\\
+
         Supervised by:\\
         Prof. Dato’ Dr. Halimah Badioze Zaman F.A.Sc\\
         Dr. Rabiah Abdul Kadir\\
-        Dr. Puteri Nor Ellyza Nohuddin
+        Dr. Puteri Nor Ellyza Nohuddin\\
+        Institute of Visual Informatics
 
         \vspace{0.8cm}
 
@@ -38,7 +41,8 @@ and add the centred logo
         
         \normalsize
         The National University of Malaysia\\
-        October 2018
+        Date: \revisiondate\\
+        Revision: \revision
 
         % Except where otherwise noted, content in this thesis is licensed under a Creative Commons Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. Copyright 2015,Tom Pollard.
 

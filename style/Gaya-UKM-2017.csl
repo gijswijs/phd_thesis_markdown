@@ -389,7 +389,7 @@
       <group delimiter=" ">
         <text macro="author-short"/>
         <text macro="issued-year"/>
-        <text macro="citation-locator"/>
+        <!-- <text macro="citation-locator"/> -->
       </group>
     </layout>
   </citation>

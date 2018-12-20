@@ -1,46 +1,52 @@
-# Research containing a figure
+# Literature Review
 
-## Introduction
+## Bitcoin
 
-This is the introduction. Sed vulputate tortor at nisl blandit interdum. Cras sagittis massa ex, quis eleifend purus condimentum congue. Maecenas tristique, justo vitae efficitur mollis, mi nulla varius elit, in consequat ligula nulla ut augue. Phasellus diam sapien, placerat sit amet tempor non, lobortis tempus ante.
+At its core a distributed ledger like the Bitcoin blockchain is an asset database that is shared across multiple sites [@Walport2015]. The entities or nodes involved in the ledger have a replicated version of the ledger available to them. Changes to the ledger are synchronized to all replicas by means of a peer-to-peer network. To ensure consistent replication across all nodes in a distributed ledger, a consensus algorithm is put in place. The peer-to-peer network in combination with the consensus algorithm enables the distributed ledger to exist without a central administrator or centralized storage.
 
-## Method
+## Privacy and anonymity
 
-Donec imperdiet, lectus vestibulum sagittis tempus, turpis dolor euismod justo, vel tempus neque libero sit amet tortor. Nam cursus commodo tincidunt.
+The nature of a distributed ledger, without a central trusted party, requires that all transactions are transparent and broadcasted to the nodes in the network. As a result, privacy can only be obtained by making it impossible to link transactions to identities [@Yli-Huumo2016].
+The separation of transaction and identity is obtained by an asymmetric encryption system in which the hash of the public key acts as an account number or address.  These addresses should be interpreted  as pseudonyms for the account holder [@Breuker2013]. Account ownership is established by owning the corresponding private key, thus making it possible for the account holder to claim ownership of an address without revealing its identity.
+Whether this can be considered anonymous depends on your definition of anonymity. Since the advent of bitcoin several alternatives (alt-coins) have been proposed that commit to stronger privacy requirements and as such adhere to a stricter definition of anonymity. E.g. Zerocoin uses a definition that stays true to the cryptographic notion of unlinkability, resulting in a system where one coin can never be distinguished from another. [@Miers2013]
+Strong anonymity a proposed by Zerocoin was never a design goal of the Bitcoin system [@Reid2013], and the resulting protocol leaks information that can be used to de-anonymize participants. The underlaying, non-anonymous infrastructure of the internet and the inherent transparency of all transactions in the blockchain make this possible [@Herrera-Joancomart2015].
 
-### Subsection 1
+## Taint resistance
 
-This is the first part of the methodology. Duis tempor sapien sed tellus ultrices blandit. Sed porta mauris tortor, eu vulputate arcu dapibus ac. Curabitur sodales at felis efficitur sollicitudin. Quisque at neque sollicitudin, mollis arcu vitae, faucibus tellus.
+Taking the original design of Bitcoin as a given, one can arrive at a different notion of anonymity, coined *taint resistance* [@Meiklejohn2015]. Taint resistance embraces the fact that a coin and its spending history are inseparable and as such focusses on obscuring the ownership of a coin at each point in its spending history.
+Taint resistance is a quantifiable measure of anonymity. It is a property of the transaction and can be applied to each transaction of a coin in its spending history.
+Taint resistance has a value ranging from 0 to 1, where 1 means an adversary can't achieve any accuracy in identifying the inputs of the Tx that tainted the output (also called the *taint set*) and 0 means that an adversary can identify the exact set of Txs that tainted the output. The latter means an adversary has exact knowledge of the taint set.
 
-### Subsection 2
+## Account clustering
 
-This is the second part of the methodology. Sed ut ipsum ultrices, interdum ipsum vel, lobortis diam. Curabitur sit amet massa quis tortor molestie dapibus a at libero. Mauris mollis magna quis ante vulputate consequat. Integer leo turpis, suscipit ac venenatis pellentesque, efficitur non sem. Pellentesque eget vulputate turpis. Etiam id nibh at elit fermentum interdum.
+Account clustering is one of the techniques being used to reveal participants. In a longitudinal analysis of the flow of coins through the Bitcoin network, properties of transactions in the blockchain can be used to deduce statements about the entities performing the transactions. E.g. if two ore more addresses are inputs to a single transaction, one can assume that the addresses are controlled by the same entity [@Ron2013]. Additionally, one can assume that a one-time change address is controlled by the same entity that controls the input addresses [@Meiklejohn2013]. These heuristics enable clustering of addresses and linking them to entities.
+More recently Supervised Machine Learning techniques have been proven to be successful in uncovering anonymity by using training set data consisting of ≈ 200 million transactions that had previously been clustered and whose participants had been identified [@Harlev2018].
 
-<!-- 
-Comments can be added like this.
---> 
+## Overlays and the Second layer
 
-## Results
+Overlays are Bitcoin improvements, proposed as solutions that run on top of the Bitcoin blockchain and don't require modifying the Bitcoin protocol. In some case small adjustments are needed to the Bitcoin protocol to make these overlays possible, which tend to be achieved via BIPs. Overlays are sometimes jointly described as Bitcoin's Second Layer and should be distinguished from initiatives that seek improvements by introducing new virtual currencies altogether.
 
-These are the results. In vitae odio at libero elementum fermentum vel iaculis enim. Nullam finibus sapien in congue condimentum. Curabitur et ligula et ipsum mollis fringilla.
+## Active or passive adversaries
 
-## Discussion
+Using the definition of taint resistance to measure anonymity, one can measure this in two ways. Using only passive adversaries or using active adversaries. A passive adversary can only use the blockchain to get information on the taint set of a specific output. This means that information that is available in the second layer, but doesn't reach the blockchain is unavailable to a passive adversary. An active adversary on the other hand can participate in the second layer and can use this extra information to his or her advantage to identify the taint set.
 
-Figure \ref{ref_a_figure} shows how to add a figure. Donec ut lacinia nibh. Nam tincidunt augue et tristique cursus. Vestibulum sagittis odio nisl, a malesuada turpis blandit quis. Cras ultrices metus tempor laoreet sodales. Nam molestie ipsum ac imperdiet laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+## Trustless Payment channels
 
-<!-- 
-Figures can be added with the following syntax:
-![my_caption \label{my_label}](source/figures/my_image.pdf){ width=50% }
+Micropayment channels or Payment channels are a class of techniques designed to make it possible to make Bitcoin transactions that aren't committed to the blockchain. In a typical setting of a payment channel, 2 or more participants keep an off-chain ledger amongst themselves that keeps track of the outstanding balances between the participants. Upon closing of the payment channel, the final balance is broadcasted to the blockchain.
 
-For details on setting attributes like width and height, see:
-http://pandoc.org/MANUAL.html#extension-link_attributes
---> 
+The first proposal for a payment channel was made by Satoshi Nakamoto, but this proposal wasn't secure [@PaymentChannels]. Since then different designs have been proposed but most of them were susceptible to transaction malleability and aren't considered secure and as such can't operate in a trustless environment.
 
-![RV Calypso is a former British Royal Navy minesweeper converted into a research vessel for the oceanographic researcher Jacques-Yves Cousteau. It was equipped with a mobile laboratory for underwater field research. \label{ref_a_figure}](source/figures/example_figure.pdf){ width=100% }
+The scalability issues that now face Bitcoin have renewed the interest in payment channels as a possible solution for this problem. *Decker-Wattenhofer duplex payment channels* was the first solution proposed to combat these scaling issues, that didn't sacrifice the property of being able to operate in a trustless environment [@Decker2015].
 
-## Conclusion
+*Poon-Dryja payment channels* was the second in this new class of trustless payment channels [@Poon2016]. Poon-Dryja payment channels form the foundation of the Lightning Network. The Lightning Network has emerged as the most prominent PCN to date [@Malavolta2017].
 
-This is the conclusion to the chapter. Quisque nec purus a quam consectetur volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In lorem justo, convallis quis lacinia eget, laoreet eu metus. Fusce blandit tellus tellus. Curabitur nec cursus odio. Quisque tristique eros nulla, vitae finibus lorem aliquam quis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+The most recent addition to the trustless PCN's is *Decker-Russell-Osuntokun eltoo Channels* [@Decker2018]. The Eltoo PCN tries to improve several aspects of its two predecessors, e.g. the absence of a punishment branch and simplifying watchtower design.
 
+## PCN Privacy Threat Model
 
+For a formal analysis of privacy in the setting of trustless PCN's a privacy threat model is a necessity. We use the threat model proposed by Malavolta [@Malavolta2017]. This threat model describes four notions of interest:
 
+- Balance security: Participants don't run the risk of losing coins to a malevolent adversary.
+- Serializability: Executions of a PCN are serializable as understood in concurrency control of transaction processing, i.e. for every concurrent processing of payments there exists an equivalent sequential execution.
+- (Off-path) Value Privacy: Malevolent passive adversaries
+- (On-path) Relationship Anonymity: Given at least on honest intermediary, corrupted intermediaries cannot determine the sender and the receiver of a transaction better than just by guessing.

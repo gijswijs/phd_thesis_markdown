@@ -1,14 +1,15 @@
-# Acknowledgements {.unnumbered}
+# Research background
 
-<!-- This is for acknowledging all of the people who helped out -->
+Bitcoin is a fully decentralized cryptocurrency that can operate in a trustless environment. Bitcoin was the first cryptocurrency that solved the Byzantine Generals Problem [@Lamport1982] in the *specific context* of cryptocurrency, by incentivizing the nodes in a network to behave honest, and by embracing randomness. The latter meaning that there's a Bayesian approach to the confirmation of a transaction, meaning that the certainty of a transaction approaches 100% asymptotically over time.
+Because a decentralized cryptocurrency operates without a trusted, central party, participants need to have a way to trust the protocol without relying on another party. This is primarily achieved by broadcasting *all* transactions transparently on to the blockchain. This gives participants in the Bitcoin network the opportunity to download the entire blockchain to verify that transactions are valid, and that the sender of a payment of which they are the receiver isn't trying to double spend their coins.
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam congue fermentum ante, semper porta nisl consectetur ut. Duis ornare sit amet dui ac faucibus. Phasellus ullamcorper leo vitae arcu ultricies cursus. Duis tristique lacus eget metus bibendum, at dapibus ante malesuada. In dictum nulla nec porta varius. Fusce et elit eget sapien fringilla maximus in sit amet dui.
+The transparency of all transactions means that privacy and anonymity can only be achieved by separating the transaction of the identities of the participants performing the transaction. This separation of transaction and identity is obtained by asymmetric encryption where the hash of the public key acts as an account number or address.  These addresses act as pseudonyms for the participant. The anonymity that is achieved by this separation knows its limits, and a lot of research has been done to show those limits [@Meiklejohn2013], [@Herrera-Joancomart2015], [@Harlev2018].
 
-Mauris eget blandit nisi, faucibus imperdiet odio. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. Donec pharetra arcu vitae euismod tincidunt. Morbi ut turpis volutpat, ultrices felis non, finibus justo. Proin convallis accumsan sem ac vulputate. Sed rhoncus ipsum eu urna placerat, sed rhoncus erat facilisis. Praesent vitae vestibulum dui. Proin interdum tellus ac velit varius, sed finibus turpis placerat.
+These limitations in turn provided the incentive for privacy improvement proposals. These proposals can be categorized into three different categories:
+- Alt-coins, new cryptocurrencies that are completely separate from Bitcoin
+- Protocol improvements, improvements to the Bitcoin protocol itself
+- Second layer improvements, overlays that run on top of the Bitcoin blockchain and don't require any or only small modifications to the Bitcoin protocol
 
-<!-- Use the \newpage command to force a new page -->
+Apart from being used as a solution for stronger privacy, the second layer is also the domain of Payment Channel Networks. These PCN's are proposed as a solution for Bitcoins scalability problem. Bitcoin is designed to handle on average 3 to 7 transactions per second. These numbers are dwarfed by centralized global payment networks like VISA, who claim to be able to process up to 24.000 transactions per second. PCN's achieve higher throughput by keeping transactions off-chain, meaning they don't get broadcasted unto the blockchain. This is made possible by opening up payment channels between participants, and keep private off-chain balances of transactions between any two participants. Upon closing of a payment channel the final balance is broadcasted to the Bitcoin blockchain. This way the amount of transactions that need to be broadcasted is drastically reduced. Theoretically this could lead to throughputs of the PCN that rival those of VISA and other global payment networks.
 
-\newpage
-
-
-
+The improved anonymity of these PCN's is almost somewhat of a byproduct, but it is comparable to the anonymity achieved by second layer improvements that have the specific goal to increase anonymity, like Mixcoin, Blindcoin and TumbleBit [@Conti2018]. The lack of a rigorous definition of the PCN protocols, the absence of a threat model, and the ambivalent interpretations of the concept of anonymity have hindered formal analysis of privacy in the context of PCN's [@Malavolta2017].

@@ -1,56 +1,12 @@
-# Research containing a table
+# Research Methodology
 
-## Introduction
+We will run a Bitcoin node with a Lightning Network node on top of it, running both in the cloud. We will run both nodes for a period of two months. During that period the following data will be collected:
 
-This is the introduction. Phasellus non purus id mauris aliquam rutrum vitae quis tellus. Maecenas rhoncus ligula nulla, fringilla placerat mi consectetur eu. Aenean nec metus ac est ornare posuere. Nunc ipsum lacus, gravida commodo turpis quis, rutrum eleifend erat. Pellentesque id lorem eget ante porta tincidunt nec nec tellus.
+- Bitcoin exchange rate against the US Dollar
+- Topological connectedness of the PCN
 
-## Method
+The gathered information together with the data available in the blockchain itself, e.g. transaction fees, will be used to predict the activities on the PCN.
 
-Vivamus consectetur, velit in congue lobortis, massa massa lacinia urna, sollicitudin semper ipsum augue quis tortor. Donec quis nisl at arcu volutpat ultrices. Maecenas ex nibh, consequat ac blandit sit amet, molestie in odio. Morbi finibus libero et nisl dignissim, at ultricies ligula pulvinar.
+Secondly, the information obtained during those two months can be used to test the taint resistance of transactions performed on the PCN in the context of a passive adversary. This also allows for developing an PCN attack model in the context of an active adversary. Following this model we will set up one to multiple Lightning nodes to allow for a second round of data gathering. During this second round we will test multiple active adversary heuristics, and measure the resulting taint resistance of transactions performed on the PCN.
 
-### Subsection 1
-
-This is the first part of the methodology.  Integer leo erat, commodo in lacus vel, egestas varius elit. Nulla eget magna quam. Nullam sollicitudin dolor ut ipsum varius tincidunt. Duis dignissim massa in ipsum accumsan imperdiet. Maecenas suscipit sapien sed dui pharetra blandit. Morbi fermentum est vel quam pretium maximus.
-
-### Subsection 2
-
-This is the second part of the methodology. Nullam accumsan condimentum eros eu volutpat. Maecenas quis ligula tempor, interdum ante sit amet, aliquet sem. Fusce tellus massa, blandit id tempus at, cursus in tortor. Nunc nec volutpat ante. Phasellus dignissim ut lectus quis porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-<!-- 
-Comments can be added like this.
---> 
-
-## Results
-
-Table \ref{ref_a_table} shows us how to add a table. Integer tincidunt sed nisl eget pellentesque. Mauris eleifend, nisl non lobortis fringilla, sapien eros aliquet orci, vitae pretium massa neque eu turpis. Pellentesque tincidunt aliquet volutpat. Ut ornare dui id ex sodales laoreet.
-
-<!-- Force the table onto a newpage -->
-
-\newpage
-
----------------------------------------------------------------------------
-Column 1            Column 2                Column 3
---------------      -------------------     -------------------
-Row 1               0.1                     0.2
-
-Row 2               0.3                     0.3
-
-Row 3               0.4                     0.4      
-
-Row 4               0.5                     0.6
-
----------------------------------------------------------------------------
-
-Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. \label{ref_a_table}
-
-
-## Discussion
-
-This is the discussion. Etiam sit amet mi eros. Donec vel nisi sed purus gravida fermentum at quis odio. Vestibulum quis nisl sit amet justo maximus molestie. Maecenas vitae arcu erat. Nulla facilisi. Nam pretium mauris eu enim porttitor, a mattis velit dictum. Nulla sit amet ligula non mauris volutpat fermentum quis vitae sapien.
-
-## Conclusion
-
-This is the conclusion to the chapter. Nullam porta tortor id vehicula interdum. Quisque pharetra, neque ut accumsan suscipit, orci orci commodo tortor, ac finibus est turpis eget justo. Cras sodales nibh nec mauris laoreet iaculis. Morbi volutpat orci felis, id condimentum nulla suscipit eu. Fusce in turpis quis ligula tempus scelerisque eget quis odio. Vestibulum et dolor id erat lobortis ullamcorper quis at sem.
-
-
-
+Thirdly, using Supervised Machine Learning algorithms and a training set data gathered in the previous phase, we will produce an inferred function which can be used to decrease the taint resistance of yet to be identified transactions.

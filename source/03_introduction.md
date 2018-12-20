@@ -1,8 +1,3 @@
-# Abstract {.unnumbered}
+# Introduction
 
-<!-- This is the abstract -->
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et turpis gravida, lacinia ante sit amet, sollicitudin erat. Aliquam efficitur vehicula leo sed condimentum. Phasellus lobortis eros vitae rutrum egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at urna imperdiet, vulputate orci eu, sollicitudin leo. Donec nec dui sagittis, malesuada erat eget, vulputate tellus. Nam ullamcorper efficitur iaculis. Mauris eu vehicula nibh. In lectus turpis, tempor at felis a, egestas fermentum massa.
-
-\pagenumbering{roman}
-\setcounter{page}{1}
+Bitcoin is the cryptocurrency with the largest market capitalization. In the beginning of 2018 Bitcoin hit its highest market cap of 835 billion US Dollar. Although this number has dwindled since then, it's still by far the most popular cryptocurrency. With this popularity some of its flaws have also risen to the surface, scalability being one of them. Several solutions have been proposed to solve these scalability issues, but only one of them has been implemented so far: the Lightning Network. This network runs on top of the Bitcoin blockchain and has the theoretical property of increasing the throughput of transactions dramatically. These solutions have the added benefit of increasing the level of anonymity of the participants. Until now the privacy of the participants in Lightning Network and other networks alike hasn't been formally analyzed. This study seeks to analyze and measure the privacy that can be obtained by participants in the Lightning Network.
