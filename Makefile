@@ -25,7 +25,7 @@ help:
 	@echo 'get local templates with: pandoc -D latex/html/etc	  				  '
 	@echo 'or generic ones from: https://github.com/jgm/pandoc-templates		  '
 
-pdf:
+buildpdf:
 	pandoc $(INPUTFILES) \
 	-o "$(OUTPUTDIR)/proposal-p95677.pdf" \
 	-H "$(STYLEDIR)/preamble.tex" \
@@ -39,6 +39,8 @@ pdf:
 	-N \
 	--pdf-engine=xelatex \
 	--verbose
+
+pdf: revision buildpdf
 
 tex:
 	pandoc $(INPUTFILES) \
