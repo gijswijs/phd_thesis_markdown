@@ -5,7 +5,7 @@ We will run a Bitcoin node with a Lightning Network node on top of it, running b
 - Bitcoin exchange rate against the US Dollar
 - Topological connectedness of the PCN
 
-The gathered information together with the data available in the blockchain itself, e.g. transaction fees, will be used to predict the activities on the PCN.
+The gathered information, together with the data available in the blockchain itself, e.g. transaction fees, will be used to predict the activities on the PCN.
 
 Secondly, the information obtained during those two months can be used to test the taint resistance of transactions performed on the PCN in the context of a passive adversary. This also allows for developing an PCN attack model in the context of an active adversary. Following this model we will set up one to multiple Lightning nodes to allow for a second round of data gathering. During this second round we will test multiple active adversary heuristics, and measure the resulting taint resistance of transactions performed on the PCN.
 

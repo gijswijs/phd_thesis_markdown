@@ -6,7 +6,7 @@ INPUTDIR=$(BASEDIR)/source
 OUTPUTDIR=$(BASEDIR)/output
 TEMPLATEDIR=$(INPUTDIR)/templates
 STYLEDIR=$(BASEDIR)/style
-INPUTFILES=$(wildcard $(INPUTDIR)/*.md)
+INPUTFILES=$(sort $(wildcard $(INPUTDIR)/*.md))
 
 BIBFILE=$(INPUTDIR)/references.bib
 
@@ -25,22 +25,21 @@ help:
 	@echo 'get local templates with: pandoc -D latex/html/etc	  				  '
 	@echo 'or generic ones from: https://github.com/jgm/pandoc-templates		  '
 
-buildpdf:
+pdf:
 	pandoc $(INPUTFILES) \
 	-o "$(OUTPUTDIR)/proposal-p95677.pdf" \
 	-H "$(STYLEDIR)/preamble.tex" \
 	--template="$(STYLEDIR)/template.tex" \
 	--bibliography="$(BIBFILE)" 2>pandoc.log \
-	--csl="$(STYLEDIR)/GayaUKM-FST-FSAAB-V1.csl" \
+	--csl="$(STYLEDIR)/Gaya-UKM-2017.csl" \
 	--highlight-style pygments \
+	--lua-filter git-revision.lua \
 	-V fontsize=12pt \
 	-V papersize=a4paper \
 	-V documentclass=report \
 	-N \
 	--pdf-engine=xelatex \
 	--verbose
-
-pdf: revision buildpdf
 
 tex:
 	pandoc $(INPUTFILES) \
@@ -74,13 +73,5 @@ html:
 	powershell rm "$(OUTPUTDIR)/source" -r -fo
 	powershell mkdir "$(OUTPUTDIR)/source"
 	powershell copy  "$(INPUTDIR)/figures" "$(OUTPUTDIR)/source/figures" -Recurse
-
-revision:
-	powershell "echo '\newcommand{\revisiondate}{' | Out-File source\_revision.md -NoNewLine -Encoding UTF8"
-	powershell 'git log -1 --format="%ad" --date=short | Out-File source\_revision.md -Append -NoNewLine -Encoding UTF8'
-	powershell "echo '}' | Out-File source\_revision.md -Append -Encoding UTF8"
-	powershell "echo '\newcommand{\revision}{' | Out-File source\_revision.md -Append -NoNewLine -Encoding UTF8"
-	powershell "git describe --always --tags | Out-File source\_revision.md -Append -NoNewLine -Encoding UTF8"
-	powershell "echo '}' | Out-File source\_revision.md -Append -Encoding UTF8"
 
 .PHONY: help pdf docx html tex

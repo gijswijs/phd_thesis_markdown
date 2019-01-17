@@ -1,4 +1,4 @@
-# Appendix 2: Abbreviations {.unnumbered}
+# Abbreviations
 
 \begin{tabbing}
 \textbf{PCN}~~~~~~~~~~~~\=\textbf{P}ayment \textbf{C}hannel \textbf{N}etwork \\  

@@ -1,0 +1,89 @@
+% Copyright note: This package defines how titles should
+% be typeset at the columbidae University
+% Please check for updates
+\ProvidesPackage{ukmTitlePage}[2019/01/17 v.01 UKM Title Page]
+\RequirePackage{graphicx}
+\newcommand*{\project}[1]{\gdef\@project{#1}%
+}
+\newcommand*{\@project}{\texttt{\string\project} currently
+not set. Please fix this.}
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}%
+}
+\newcommand*{\@supervisor}{\texttt{\string\supervisor} currently
+not set. Please fix this.}
+\newcommand*{\institute}[1]{\gdef\@institute{#1}%
+}
+\newcommand*{\@institute}{\texttt{\string\institute} currently
+not set. Please fix this.}
+\newcommand*{\metriccardnr}[1]{\gdef\@metriccardnr{#1}%
+}
+\newcommand*{\@metriccardnr}{\texttt{\string\metriccardnr} currently
+not set. Please fix this.}
+\newcommand*{\revision}[1]{\gdef\@revision{#1}%
+}
+\newcommand*{\@revision}{\texttt{\string\revision} currently
+not set. Please fix this.}
+
+\renewcommand*{\maketitle}{%
+% \begin{titlepage}
+% {\raggedleft%
+% 	\includegraphics[width=3cm]{example-image-16x9}\par
+% }\vspace{1cm}
+% 	\centering
+% {\scshape\LARGE Columbidae University \par}
+% \vspace{1cm}
+% {\scshape\Large\@project\unskip\strut\par}
+% \vspace{1.5cm}
+% {\huge\bfseries\@title\unskip\strut\par}
+% \vspace{2cm}
+% {\Large\itshape\@author\unskip\strut\par}
+% \vfill
+% supervised by\par
+% \@supervisor\unskip\strut\par
+
+% \vfill
+
+% {\large \@date\par}
+% \end{titlepage}
+\begin{titlepage}
+    \begin{center}
+
+        \vspace*{1.5cm}
+        
+        \huge
+        \@title 
+        
+        \vspace{1cm}
+        
+        \Large
+        \@author\\
+        \@metriccardnr
+
+        \vspace{1cm}
+
+        \Large
+        \@project
+        
+        \vfill
+        
+        \normalsize
+        Supervised by:\\
+        \@supervisor\\
+        \@institute
+
+        \vspace{0.8cm}
+
+        % Uncomment the following line
+        % to add a centered university logo
+        \includegraphics[width=0.4\textwidth]{style/ukm-logo.eps}
+        
+        \normalsize
+        The National University of Malaysia\\
+        Date: \@date\\
+        Revision: \@revision
+
+    \end{center}
+\end{titlepage}
+
+}
+\endinput

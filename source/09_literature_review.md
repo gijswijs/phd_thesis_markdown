@@ -30,7 +30,7 @@ Overlays are Bitcoin improvements, proposed as solutions that run on top of the 
 
 Using the definition of taint resistance to measure anonymity, one can measure this in two ways. Using only passive adversaries or using active adversaries. A passive adversary can only use the blockchain to get information on the taint set of a specific output. This means that information that is available in the second layer, but doesn't reach the blockchain is unavailable to a passive adversary. An active adversary on the other hand can participate in the second layer and can use this extra information to his or her advantage to identify the taint set.
 
-## Trustless Payment channels
+## Trustless Payment Channels
 
 Micropayment channels or Payment channels are a class of techniques designed to make it possible to make Bitcoin transactions that aren't committed to the blockchain. In a typical setting of a payment channel, 2 or more participants keep an off-chain ledger amongst themselves that keeps track of the outstanding balances between the participants. Upon closing of the payment channel, the final balance is broadcasted to the blockchain.
 
