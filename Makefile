@@ -33,7 +33,7 @@ pdf:
 	--bibliography="$(BIBFILE)" 2>pandoc.log \
 	--csl="$(STYLEDIR)/Gaya-UKM-2017.csl" \
 	--highlight-style pygments \
-	--lua-filter git-revision.lua \
+	--lua-filter="$(STYLEDIR)/git-revision.lua" \
 	-V fontsize=12pt \
 	-V papersize=a4paper \
 	-V documentclass=report \
