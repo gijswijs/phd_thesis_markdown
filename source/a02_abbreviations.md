@@ -1,3 +1,4 @@
+\newpage
 # Abbreviations
 
 \begin{tabbing}

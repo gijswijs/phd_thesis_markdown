@@ -5,6 +5,9 @@ $else$
 \usepackage{lmodern}
 $endif$
 
+\usepackage{pdfpages}
+
+
 % Title page package
 \usepackage{style/ukmTitlePage}
 \project{$project$}
@@ -12,7 +15,6 @@ $endif$
 \metriccardnr{$metriccardnr$}
 \institute{$institute$}
 \revision{$revision$}
-
 
 % Overwrite \begin{figure}[htbp] with \begin{figure}[H]
 \usepackage{float}
@@ -40,6 +42,7 @@ $if(linestretch)$
 $endif$
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
+
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}

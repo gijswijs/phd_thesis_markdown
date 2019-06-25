@@ -39,7 +39,6 @@ pdf:
 	-V documentclass=report \
 	-N \
 	--pdf-engine=xelatex \
-	--verbose
 
 tex:
 	pandoc $(INPUTFILES) \
