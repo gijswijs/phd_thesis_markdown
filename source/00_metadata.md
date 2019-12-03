@@ -1,7 +1,7 @@
 ﻿---
 nocite: |
   @Pollard2016
-title: De-anonymization of Bitcoin Transactions in Decentralized, Trustless Payment Channel Networks
+title: Value Privacy and Relationship Anonymity in Lightning Network
 author: Gijs van Dam
 metriccardnr: P95677
 project: Research Proposal
