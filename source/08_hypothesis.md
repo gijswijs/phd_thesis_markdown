@@ -1,12 +1,21 @@
-# Hypotheses
+# Hypothesis
 
-1. The number of Unilaterally closed payment channels broadcasted to the Bitcoin blockchain in a specific period of time is a predictor for the number of Txs in the PCN.
-    a) There is an effect modification of the average transaction fee calculated over the same period
-    b) There is an effect modification of the average exchange rate against the US Dollar calculated over the same period
-    c) There is an effect modification of the topological average connectedness of the PCN calculated over the same period
-2. The fact that contracts belonging to the same Txs in a PCN encode the same condition, is a valid and practical heuristic for significantly reducing anonymity, measured as taint resistance of the coins involved in the Txs.
-    a) A passive adversary cannot obtain the information needed to implement this heuristic.
-    b) An active adversary can obtain the information needed to implement this heuristic.
-3. Anonymity of yet-unidentified entities, measured as taint resistance of the coins involved, in a PCN can accurately be reduced by Supervised Machine Learning algorithms using training set data with linked senders and receivers.
+dependent variable
+independent variable
+direction
+testable
 
+Interactions between Lightning Network clients on the level of the BOLT protocol and on the level of the P2P network affect the value privacy and relationship anonymity as described by Malavolta [@Malavolta2017].
 
+Interactions between Lightning Network clients on the level of the BOLT protocol and on the level of the P2P network uncover information about payments (value privacy) and information about the sender and receiver of a transaction (relationship anonymity) to malicious participants.
+
+As a null-hypothesis
+Interactions between Lightning Network clients on the level of the BOLT protocol and on the level of the P2P network does not uncover information about payments (value privacy) and information about the sender and receiver of a transaction (relationship anonymity) to malicious participants.
+
+Without mentioning protocol level or P2P network level:
+The Lightning Network doesn't leak information about payments (value privacy) and information about the sender and receiver of a transaction (relationship anonymity) to malicious participants.
+
+[@Peisert2007]
+The Lightning messages sent over the Lightning Network do not leak off-path information about payments (value privacy) or on-path information about the sender and receiver of a transaction (relationship anonymity) to malicious participants.
+
+Two variables: The data set of Lightning messages sent over the network, The Lightning client configuration. The data set is the independent variable (this is what we change), The Lightning client configuration is the dependent variable. (The one we test)
