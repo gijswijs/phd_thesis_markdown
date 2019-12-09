@@ -96,7 +96,7 @@ Both passive and active payment correlation will both be evaluated in our test c
 
 The improved BDA and the Payment correlation attack are attacks on value privacy and relationship anonymity. Based on our analysis of these attacks we will suggest and develop countermeasures. When possible we will include the countermeasures in our analysis to measure the effect.
 
-TODO: LEESVOER!
+TODO: LEESVOER! Niet vergeten te verwijderen uit het voorstel!
 Papers
 Sphinx: A compact and provably secure mix format
 Hijacking Routes in Payment Channel Networks : A Predictability Tradeoff
@@ -122,3 +122,12 @@ https://en.wikipedia.org/wiki/Tor_(anonymity_network)#Weaknesses
 https://cyber.stanford.edu/sites/g/files/sbiybj9936/f/olaoluwaosuntokun.pdf
 https://medium.com/@rusty_lightning/decorrelation-of-lightning-payments-7b6579db96b0
 https://suredbits.com/payment-points-part-1/
+
+Courses:
+https://www.udemy.com/course/graph-theory/?ranMID=39197&ranEAID=QB%2FWso%2FfaNU&ranSiteID=QB_Wso_faNU-xeG_BsmmddWgxA4neStgpw&LSNPUBID=QB%2FWso%2FfaNU
+https://www.coursera.org/learn/graphs?ranMID=40328&ranEAID=QB%2FWso%2FfaNU&ranSiteID=QB_Wso_faNU-tUJNKrk0LEXEgaj3b1QG_w&siteID=QB_Wso_faNU-tUJNKrk0LEXEgaj3b1QG_w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=QB%2FWso%2FfaNU
+
+Deze? https://eliademy.com/catalog/fundamentals-of-classical-set-theory.html
+
+https://www.coursera.org/learn/datasciencemathskills
+https://www.coursera.org/learn/formal-concept-analysis
