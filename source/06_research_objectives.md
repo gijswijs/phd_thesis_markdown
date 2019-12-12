@@ -7,4 +7,4 @@ To do so we have the following objectives:
 - Reproduce and improve the balance discovery attack
 - Develop passive and active payment correlation attacks
 - Develop improvements to the Lightning protocol to mitigate those attacks
-- Measure the privacy loss of those attacks on Bitcoin mainnet in terms of \varepsilon-differential privacy before and after implementing the improvements.
+- Measure the privacy loss of those attacks on Bitcoin mainnet in terms of $\varepsilon$-differential privacy before and after implementing the improvements.
