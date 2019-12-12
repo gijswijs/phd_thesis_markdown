@@ -1,7 +1,10 @@
 # Research Objectives
 
-This research has the following objectives:
+This research aims to study whether Lightning Network offers off-path value privacy and on-path relationship anonymity.
 
-1. To identify predictors for activity on PCN's within the blockchain
-2. To develop new heuristics for de-anonymization in PCN's
-3. To apply these heuristics using Supervised Machine Learning Algorithms
+To do so we have the following objectives:
+
+- Reproduce and improve the balance discovery attack
+- Develop passive and active payment correlation attacks
+- Develop improvements to the Lightning protocol to mitigate those attacks
+- Measure the privacy loss of those attacks on Bitcoin mainnet before and after implementing the improvements.
