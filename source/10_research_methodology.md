@@ -96,6 +96,8 @@ Both passive and active payment correlation will both be evaluated in our test c
 
 The improved BDA and the Payment correlation attack are attacks on value privacy and relationship anonymity. Based on our analysis of these attacks we will suggest and develop countermeasures. When possible we will include the countermeasures in our analysis to measure the effect. Countermeasures can take the form of suggesting improvements that make it impossible to leak information, or, when the protocol requires us to leak information to a certain extent, add noise to the information in a way that insures differential privacy.
 
+<div>
+<!-- 
 TODO: LEESVOER! Niet vergeten te verwijderen uit het voorstel!
 Papers
 Sphinx: A compact and provably secure mix format
@@ -132,3 +134,5 @@ Deze? https://eliademy.com/catalog/fundamentals-of-classical-set-theory.html
 
 https://www.coursera.org/learn/datasciencemathskills
 https://www.coursera.org/learn/formal-concept-analysis
+-->
+</div>
