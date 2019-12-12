@@ -46,7 +46,47 @@ The most recent addition to the trustless PCN's is *Decker-Russell-Osuntokun elt
 
 For a formal analysis of privacy in the setting of trustless PCN's a privacy threat model is a necessity. We use the threat model proposed by Malavolta [@Malavolta2017]. This threat model describes four notions of interest:
 
-- Balance security: Participants don't run the risk of losing coins to a malevolent adversary.
-- Serializability: Executions of a PCN are serializable as understood in concurrency control of transaction processing, i.e. for every concurrent processing of payments there exists an equivalent sequential execution.
-- (Off-path) Value Privacy: Malevolent passive adversaries
-- (On-path) Relationship Anonymity: Given at least on honest intermediary, corrupted intermediaries cannot determine the sender and the receiver of a transaction better than just by guessing.
+- Balance security: participants don't run the risk of losing coins to a malevolent adversary.
+- Serializability: executions of a PCN are serializable as understood in concurrency control of transaction processing, i.e. for every concurrent processing of payments there exists an equivalent sequential execution.
+- (Off-path) value privacy: malicious participants in the network cannot learn information about payments they aren't part of.
+- (On-path) relationship anonymity: given at least on honest intermediary, corrupted intermediaries cannot determine the sender and the receiver of a transaction better than just by guessing.
+
+## Onion Routing, Mix Networks and Sphinx
+
+Mix networks [@Chaum1981] are routing protocols that work by chaining a set of proxy servers to create difficult to trace communication. This is done by taking in multiple messages from multiple senders, shuffling them and sending them along in random order to the next server in a chain. This process breaks the connection between sender and receiver, making it harder to listen in on communication between two participants. Because a proxy server only knows the direct sender of the message and the direct receiver of the message, neither of which has to be the actual sender or receiver, a mix network is resistant to malicious proxy servers.
+
+Onion routing [@Reed1998] is a routing scheme used for anonymous communication over a network. In an onion network messages are sent over a route of proxy servers. The message is wrapped in layers of encryption that need to be decrypted by each server successively. By unwrapping a layer of encryption a proxy server gets to know where to send the message wrapped with the remaining layers of encryption next. This peeling of layers is why the entire data structure of a message is called an onion. 
+
+Onion routing gets it security from the assumption that an adversary can't see the entire route, but only a subset of it. If an adversary does see the entire route, the anonymity breaks down completely. Mix networks however, do work in a situation where an adversary would see the entire network and the traffic within it, because the mixing of messages from multiple senders makes it impossible to detect who is communicating with whom. This security comes at trade-off in the form of loss of real-time communication, since the proxy servers have to wait for messages from other senders to be able to perform a mix.
+
+The Sphinx protocol is a mix protocol that uses onion routing. It has all the security properties set out by Camenisch and Lysyanskaya [@Camenisch2006a] with the added property that an adversary in the middle of a path is even unable to distinguish forward messages from replies. The Sphinx protocol is the protocol used in Lightning Network.
+
+## Balance Discovery Attack
+
+Recent research has already proven that value privacy isn't fully obtainable in the Lightning Network. With an attack coined the balance discovery attack [@Herrera-Joancomarti2019] it is possible to obtain information about Lightning payments.  In the basic scenario for channel balance discovery  it is assumed that there is an open payment channel $AB$ between Alice, $A$, and Bob, $B$, with capacity $C_{AB}$. The goal of the adversary, Mallory, $M$, is to discover the balances of each node in channel $AB$: $balance_{AB}$ and $balance_{BA}$. To do so Mallory opens up a channel with Alice (see [@fig:simple]).
+
+<div id="fig:simple">
+\tikzset{
+    auto,node distance =1 cm and 1 cm,semithick,
+    state/.style ={circle, draw, minimum width = 0.9 cm}
+}
+\begin{tikzpicture}
+  \node[state] (m) at (0,0) {$M$};
+  \node[state] (a) [right =of m] {$A$};
+  \node[state] (b) [right =of a] {$B$};
+  \path (m) edge (a);
+  \path (a) edge (b);
+\end{tikzpicture}
+
+Basic BDA were the adversary Mallory tries to disclose the balance between Alice and Bob
+</div>
+
+Mallory tries to to disclose $balance_{AB}$ by routing invalid payments through $M \leftrightarrow A \leftrightarrow B$, using the basic BDA algorithm. The inputs parameters for the algorithm are the target node $B$, the route to the target node, the value range to search in, given by 0 and $C_{AB}$, and the required accuracy for the algorithm. The algorithm creates invalid payments by using random, invalid payment hashes for each payment. The value for each payment follows a binary search pattern for which the initial lower and upper bounds are given by the value range input.
+
+Bob, the recipient of the payment, is the only one who can determine that a payment from Mallory is invalid. Therefore, receiving an error stating the payment hash is invalid, means that $balance_{AB}$ was sufficient to route the payment, because if it was not, Alice would have returned an error stating insufficient funds and Bob would never have known about the payment. This fact is leveraged by updating the lower bound of the binary search to the value of the last payment. If however the failure message states insufficient funds, the upper bound is updated with the value of the last payment. This process repeats itself recursively until the difference between the upper bound and the lower bound of the binary search is within the threshold set by the accuracy input. The algorithm returns a tuple that gives the range within which $balance_{AB}$ sits. Since the capacity of the channel $C_{AB}$ is known, the $balance_{BA}$ can be calculated with $balance_{BA} = C_{BA} - balance_{AB}$.
+
+By periodically executing a BDA, an adversary van monitor balances over time. This allows for tracing transactions. Therefore, this type of attack poses a threat for the value privacy as described in the threat model above.
+
+## Differential Privacy
+
+Differential privacy is the concept of sharing information about a dataset without sharing information about a particular entry in that data set. An algorithm is said to be differential private if an observer cannot tell whether a calculation on that data set included a particular entry or not. It was shown that it is impossible to publish arbitrary queries on a dataset without revealing some amount of private data [@Dinur2003]. This led to the ascertainment that it is impossible to protect privacy in such datasets without injecting noise into the results of the queries. This led to the development of differential privacy in which the amount of noise needed and a general mechanism for doing so were formalized [@Dwork2006].
