@@ -116,6 +116,7 @@ https://github.com/ElementsProject/scriptless-scripts/blob/master/md/multi-hop-l
 https://suredbits.com/payment-points-part-2-stuckless-payments/
 https://suredbits.com/payment-points-part-3-escrow-contracts/
 https://suredbits.com/payment-points-part-4-selling-signatures/
+https://towardsdatascience.com/understanding-differential-privacy-85ce191e198a
 
 Al gelezen:
 https://en.wikipedia.org/wiki/Tor_(anonymity_network)#Weaknesses
