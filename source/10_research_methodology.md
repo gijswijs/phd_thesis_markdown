@@ -3,11 +3,9 @@
 In order to research whether interactions between different LN client software implementations play a role, we must first determine which LN clients are available. By determining the network share of each client type, we are able to determine the most important clients. We will then create a wrapper for each client to make it possible to control each client through their respective API's in a uniform way.
 Those clients are then used to run a local testing cluster of LN nodes. On this cluster we first analyze the impact of BDA on value privacy. Subsequently we will analyze the whether the onion routing protocol is resilient enough to provide relationship anonymity. Finally we will develop or propose countermeasures for the attacks we describe.
 
-## Network shares
+## Estimate Network shares
 
-We will use 1ML Lightning Network Search and Analysis Engine[^1ml] to estimate respective proportions of each client in LN. 1ML is a website that publishes the current state of the LN graph and allows for node owners to self-report on a voluntary basis the type of client they use. We will choose the three top  LN clients with the largest network share for analysis in our local test cluster.
-
-[^1ml]: https://1ml.com/
+We will use 1ML to estimate respective proportions of each client in LN.  We will choose the three top LN clients with the largest network share for analysis in our local test cluster.
 
 ## Client Wrapper
 
