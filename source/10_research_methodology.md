@@ -98,7 +98,7 @@ The improved BDA and the Payment correlation attack are attacks on value privacy
 
 <div>
 <!-- 
-TODO: LEESVOER! Niet vergeten te verwijderen uit het voorstel!
+TODO: LEESVOER!
 Papers
 Sphinx: A compact and provably secure mix format
 Hijacking Routes in Payment Channel Networks : A Predictability Tradeoff
