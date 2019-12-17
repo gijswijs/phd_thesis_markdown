@@ -1,13 +1,15 @@
 # Research Methodology
 
 In order to research whether interactions between different LN client software implementations play a role, we must first determine which LN clients are available. By determining the network share of each client type, we are able to determine the most important clients. We will then create a wrapper for each client to make it possible to control each client through their respective API's in a uniform way.
-Those clients are then used to run a local testing cluster of LN nodes. On this cluster we first analyze the impact of BDA on value privacy. Subsequently we will analyze the whether the onion routing protocol is resilient enough to provide relationship anonymity. Finally we will develop or propose countermeasures for the attacks we describe.
+Those clients are then used to run a local testing cluster of LN nodes. On this cluster we first analyze the impact of BDA on value privacy. Subsequently we will analyze whether the onion routing protocol is resilient enough to provide relationship anonymity. We will measure this impact by means of increased $\varepsilon$-differential privacy or decreased taint resistance. Finally we will develop or propose countermeasures for the attacks we describe and analyze their effectiveness by measuring their effect on $\varepsilon$-differential privacy and taint resistance.
 
 ## Estimate Network shares
 
-We will use 1ML to estimate respective proportions of each client in LN.  We will choose the three top LN clients with the largest network share for analysis in our local test cluster.
+We will use 1ML to estimate respective proportions of each client in LN. We will choose the three top LN clients with the largest network share for analysis in our local test cluster.
 
 ## Client Wrapper
+
+The top three LN clients will be used to run certain test scenario's on. To be able to run a scenario regardless of the type of software a LN node runs, we need a way to uniformly control each of the three clients.
 
 All clients have an API that allows for communication with a local instance of a client. Although all clients follow the same LN specifications, the implementations of those API's differ on details. E.g. the commands used for connecting to peers, or opening up payment channels, and the parameters needed to do so, differ slightly across the three clients. Some commands run synchronously on one client while asynchronously on another. Therefor it is necessary to develop a wrapper for each of the clients' API, making it possible to address the API programmatically in a uniform way, independent of the type of client.
 
@@ -37,22 +39,24 @@ Table: Different commands used by the top three clients, and their translation t
 
 \normalsize
 
-Using the wrapper it is possible to implement several algorithms, and run them on any possible configuration of different clients across three nodes.
+Using the wrapper it is possible to implement several test scenarios, and run them on any possible configuration of different clients across multiple nodes.
 
 [^listchannels]: c-lightning returns all channels out of the network graph as it is known to the client, when using listchannels, whereas the other clients return the channels of that specific node. The other clients have a separate command for returning the network graph as it is known to the client.
 [^newaddress]: Eclair doesn't support a wallet, instead it uses bitcoind's wallet
 
 ## Testing cluster
 
-The open source tool Simverse[^simverse] will be used to create a testing environment. Simverse generates a local cluster of LN  nodes, each running one of three supported clients. Those clients align with the clients with the largest share. Each LN node runs in it's own Docker container and Docker-compose is used to manage the cluster.
+The open source tool Simverse[^simverse] will be used to create a testing environment. Simverse generates a local cluster of LN nodes, each running one of three supported clients. Those clients align with the clients with the largest share. Each LN node runs in it's own Docker container and Docker-compose is used to manage the cluster.
 
 The LN nodes use Bitcoin Core's Bitcoind implementation as a Bitcoin backend. Bitcoind will run in regression testing mode, known as regtest mode. This is a local test mode, making it possible to almost instantly create blocks with no real world value. Using regtest mode, the different implementations can be tested without incurring transaction fees for the on-chain transactions and without having to wait for blocks to be mined.
+
+With the testing cluster in place we can use the wrapper is the intermediary between the test scenario and the node.
 
 [^simverse]: https://github.com/darwin/simverse
 
 ## Improve BDA algorithm
 
-The original minmaxBandwidth algorithm proposed by Herrera-Joancomarti [-@Herrera-Joancomarti2019] is bound by an upper limit set by MAX_PAYMENT_ALLOWED. This limit makes it impossible to probe balances that are higher than $2^{32} - 1 msat$.
+The first test scenarios will consider the existing BDA algorithm. The original minmaxBandwidth algorithm proposed by Herrera-Joancomarti [-@Herrera-Joancomarti2019] is bound by an upper limit set by MAX_PAYMENT_ALLOWED. This limit makes it impossible to probe balances that are higher than $2^{32} - 1 msat$.
 
 Consider a channel $AB$ with capacity $C_{AB}$. Since $C_{AB} = C_{BA} = balance_{AB} + balance_{BA}$, the following holds
 
@@ -84,13 +88,13 @@ We will leverage this fact to create an algorithm that can disclose balances fro
 
 ## Payment correlation
 
-We will first confirm payment correlation in our test cluster, using the hash for the secret preimage, which remains the same throughout the entire payment route. By using two collaborating nodes on a payment path, they both can monitor the HTLC's for the same hash. In doing so it's possible to connect the sender with the receiver in situations where the collaborating nodes are the entry relay and exiting relay of a route. This passive payment correlation is similar to passive traffic-analysis used for end-to-end correlation in Tor networks. We will also assess the feasibility of using other parameters for payment correlation like expiry and payment amounts.
+The second set of testing scenarios to be run on the test cluster will consider payment correlation. We will first confirm payment correlation in our test cluster, using the hash for the secret preimage, which remains the same throughout the entire payment route. By using two collaborating nodes on a payment path, they both can monitor the HTLC's for the same hash. In doing so it's possible to connect the sender with the receiver in situations where the collaborating nodes are the entry relay and exiting relay of a route. This passive payment correlation is similar to passive traffic-analysis used for end-to-end correlation in Tor networks. We will also assess the feasibility of using other parameters for payment correlation like expiry and payment amounts.
 
 Subsequently we will try to use active payment correlation. By delaying Sphinx packets at the entry relay and by measuring the delay at the exit relay, it's possible to link entry and exit.
 
 Both passive and active payment correlation will both be evaluated in our test cluster and in Lightning Network running on Bitcoin Mainnet to assess whether our attacks are robust against the noise added by a full scale production network.
 
-## Countermeasures
+## Mitigations
 
 The improved BDA and the Payment correlation attack are attacks on value privacy and relationship anonymity. Based on our analysis of these attacks we will suggest and develop countermeasures. When possible we will include the countermeasures in our analysis to measure the effect. Countermeasures can take the form of suggesting improvements that make it impossible to leak information, or, when the protocol requires us to leak information to a certain extent, add noise to the information in a way that insures differential privacy.
 
