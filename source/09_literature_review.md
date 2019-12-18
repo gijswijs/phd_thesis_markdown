@@ -51,7 +51,7 @@ For a formal analysis of privacy in the setting of trustless PCN's a privacy thr
 - Balance security: participants don't run the risk of losing coins to a malevolent adversary.
 - Serializability: executions of a PCN are serializable as understood in concurrency control of transaction processing, i.e. for every concurrent processing of payments there exists an equivalent sequential execution.
 - (Off-path) value privacy: malicious participants in the network cannot learn information about payments they aren't part of.
-- (On-path) relationship anonymity: given at least on honest intermediary, corrupted intermediaries cannot determine the sender and the receiver of a transaction better than just by guessing.
+- (On-path) relationship anonymity: given at least one honest intermediary, corrupted intermediaries cannot determine the sender and the receiver of a transaction better than just by guessing.
 
 ## Onion Routing, Mix Networks and Sphinx
 
