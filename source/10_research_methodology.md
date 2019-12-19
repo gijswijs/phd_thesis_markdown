@@ -3,6 +3,55 @@
 In order to research whether interactions between different LN client software implementations play a role, we must first determine which LN clients are available. By determining the network share of each client type, we are able to determine the most important clients. We will then create a wrapper for each client to make it possible to control each client through their respective API's in a uniform way.
 Those clients are then used to run a local testing cluster of LN nodes. On this cluster we first analyze the impact of BDA on value privacy. Subsequently we will analyze whether the onion routing protocol is resilient enough to provide relationship anonymity. We will measure this impact by means of increased $\varepsilon$-differential privacy or decreased taint resistance. Finally we will develop or propose countermeasures for the attacks we describe and analyze their effectiveness by measuring their effect on $\varepsilon$-differential privacy and taint resistance.
 
+<div id="fig:method">
+\tikzset{
+    align=center, node distance=1cm,
+    arrow/.style ={thick,->,>=stealth},
+    process/.style={rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, text width=3cm},
+    title/.style={text centered, text width=3cm, minimum width=3cm, align=right, font=\bfseries},
+    row/.style={text centered, text width=3cm, minimum width=3cm, align=left, font=\bfseries}
+}
+\begin{tikzpicture}[]
+
+\node (a) [process] {Capture LN network traffic};
+\node (b) [process, below = of a] {Create BDA test scenario's};
+\node (c) [process, right = of a] {Capture LN network traffic};
+\node (d) [process, below = of c] {Create PC test scenario's};
+\node (e) [process, left = of b] {Extract 1ML data};
+\node (f) [process, below = of b] {Improved BDA algorithm};
+\node (g) [process, below = of d] {PC algorithm};
+\node (h) [process, below = of f] {BDA with mitigations};
+\node (i) [process, below = of g] {PC with mitigations};
+\node (j) [process, below = of h] {$\varepsilon$-differential privacy};
+\node (k) [process, below = of i] {$\varepsilon$-differential privacy and/or taint resistance};
+\node (l) [process, left = of j] {Calculate proportions with FPCF};
+
+
+\node (bda) [title, above = of a] {Value\\Privacy};
+\node (pc) [title, above = of c] {Payment Correlation};
+
+\node (analysis) [row, left = of l, xshift=1cm] {Data Analysis};
+\node (data) [row, above = of analysis, yshift=6.5cm] {Data Collection};
+
+\draw [arrow] (a) -- (b);
+\draw [arrow] (a) -- (e);
+\draw [arrow] (c) -- (d);
+\draw [arrow] (b) -- (f);
+\draw [arrow] (d) -- (g);
+\draw [arrow] (f) -- (h);
+\draw [arrow] (g) -- (i);
+\draw [arrow] (h) -- (j);
+\draw [arrow] (i) -- (k);
+\draw [arrow] (e) -- (l);
+
+\node [fit={(a) (b) (e) (f) (h) (j) (bda) ($(l.south)+(0,-9pt)$)},draw, dashed] {};
+\node [fit={(c) (d) (g) (i) ($(k.south)+(0,-10pt)$) ($(pc.north)+(0,2pt)$)},draw,dashed] {};
+\node [fit=(analysis) (j) (k) (l),draw,dotted, inner xsep=10pt] {};
+\node [fit=(data) (a) (b) (c) (d) (e) (f) (g) (h) (i),draw,dotted, inner xsep=10pt] {};
+
+\end{tikzpicture}
+</div>
+
 ## Estimate Network shares
 
 We will use 1ML to estimate respective proportions of each client in LN. We will choose the three top LN clients with the largest network share for analysis in our local test cluster.
@@ -136,5 +185,20 @@ Deze? https://eliademy.com/catalog/fundamentals-of-classical-set-theory.html
 
 https://www.coursera.org/learn/datasciencemathskills
 https://www.coursera.org/learn/formal-concept-analysis
+
+NOTES: 2019-12-18
+http://acqnotes.com/acqnote/careerfields/5-steps-in-the-reasearch-process
+
+Link objectives to value privacy and relationship anonymity.
+
+3rd objective: Propose mitigations
+
+2nd point for mitigation in hypothesis
+
+Put in the algorithm
+
+Create a diagram for the research
+
+No references in the summary
 -->
 </div>
