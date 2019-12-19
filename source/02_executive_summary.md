@@ -14,7 +14,4 @@ In our research we use a definition of privacy in the context of PCN's that defi
 - (On-path) relationship anonymity: given at least one honest intermediary, corrupted intermediaries cannot determine the sender and the receiver of a transaction better than just by guessing.
 
 Our hypothesis claims that the latter two requirements, namely value privacy and relationship anonymity are currently not being met by the LN protocol. We seek to proof this in a test network of LN clients, performing transactions with each other. By capturing the network traffic consisting of the protocol messages that these transactions entail, we seek to proof that information is obtainable from these messages that can help to identify the value of transactions and the sender and receiver to an extent that is better than just guessing. The results should provide a formal analysis of privacy in LN by means of measurable quantities of privacy loss.
-
-We seek to increase the awareness of the risks involved in dealing with cryptocurrencies over PCNs in general and LN specifically. We will quantify these risks and propose improvements to the LN protocol that safeguard the privacy of the participants. Lastly, the analysis proposed in this research should be beneficial in due-diligence of reporting institutions by scrutinizing and screening blockchain and LN transactions.
-
 \newpage
