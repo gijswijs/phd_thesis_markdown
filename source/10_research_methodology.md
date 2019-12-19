@@ -1,9 +1,7 @@
 # Research Methodology
 
-In order to research whether interactions between different LN client software implementations play a role, we must first determine which LN clients are available. By determining the network share of each client type, we are able to determine the most important clients. We will then create a wrapper for each client to make it possible to control each client through their respective API's in a uniform way.
-Those clients are then used to run a local testing cluster of LN nodes. On this cluster we first analyze the impact of BDA on value privacy. Subsequently we will analyze whether the onion routing protocol is resilient enough to provide relationship anonymity. We will measure this impact by means of increased $\varepsilon$-differential privacy or decreased taint resistance. Finally we will develop or propose countermeasures for the attacks we describe and analyze their effectiveness by measuring their effect on $\varepsilon$-differential privacy and taint resistance.
+Our research is quantitative in nature and therefor uses an experimental approach. An overview of the methodology is provided below and subsequently explained in more detail.
 
-<div id="fig:method">
 \tikzset{
     align=center, node distance=1cm,
     arrow/.style ={thick,->,>=stealth},
@@ -50,13 +48,16 @@ Those clients are then used to run a local testing cluster of LN nodes. On this 
 \node [fit=(data) (a) (b) (c) (d) (e) (f) (g) (h) (i),draw,dotted, inner xsep=10pt] {};
 
 \end{tikzpicture}
-</div>
 
-## Estimate Network shares
+## Data Collection
+
+In order to research whether interactions between different LN client software implementations play a role, we must first determine which LN clients are available. By determining the network share of each client type, we are able to determine the most important clients. We will then create a wrapper for each client to make it possible to control each client through their respective API's in a uniform way. Those clients are then used to run a local testing cluster of LN nodes. On the testing cluster we will run test scenario's to evaluate BDA and payment correlation algorithms and their mitigations.
+
+### Extract 1ML data
 
 We will use 1ML to estimate respective proportions of each client in LN. We will choose the three top LN clients with the largest network share for analysis in our local test cluster.
 
-## Client Wrapper
+### Client Wrapper
 
 The top three LN clients will be used to run certain test scenario's on. To be able to run a scenario regardless of the type of software a LN node runs, we need a way to uniformly control each of the three clients.
 
@@ -93,7 +94,7 @@ Using the wrapper it is possible to implement several test scenarios, and run th
 [^listchannels]: c-lightning returns all channels out of the network graph as it is known to the client, when using listchannels, whereas the other clients return the channels of that specific node. The other clients have a separate command for returning the network graph as it is known to the client.
 [^newaddress]: Eclair doesn't support a wallet, instead it uses bitcoind's wallet
 
-## Testing cluster
+### Testing cluster
 
 The open source tool Simverse[^simverse] will be used to create a testing environment. Simverse generates a local cluster of LN nodes, each running one of three supported clients. Those clients align with the clients with the largest share. Each LN node runs in it's own Docker container and Docker-compose is used to manage the cluster.
 
@@ -103,7 +104,7 @@ With the testing cluster in place we can use the wrapper is the intermediary bet
 
 [^simverse]: https://github.com/darwin/simverse
 
-## Improve BDA algorithm
+### Improve BDA algorithm
 
 The first test scenarios will consider the existing BDA algorithm. The original minmaxBandwidth algorithm proposed by Herrera-Joancomarti [-@Herrera-Joancomarti2019] is bound by an upper limit set by MAX_PAYMENT_ALLOWED. This limit makes it impossible to probe balances that are higher than $2^{32} - 1 msat$.
 
@@ -133,9 +134,51 @@ For all channels with a capacity $C_{AB} < 2^{33}$ there's always a balance lowe
 Basic scenario with an optional second channel for two-way probing
 </div>
 
-We will leverage this fact to create an algorithm that can disclose balances from channels with a higher capacity.
+We will leverage this fact to create an algorithm that can disclose balances from channels with a higher capacity (See \ref{twowayProbing}).
 
-## Payment correlation
+\begin{algorithm}
+\caption{Two-way Probing}\label{twowayProbing}
+\begin{algorithmic}[1]
+\Require route, target, maxFlow, minFlow, accuracy\_treshold
+\Ensure bwidth, an array of tuples that gives the range of bandwidth discovered for each channel
+\State $missingTests \gets True$
+\State $bwidth.max \gets maxFlow$
+\State $bwidth.min \gets minFlow$
+\LState $channelCapacity \gets getInfo(target).capacity$
+\While{missingTests}
+  \If{$bwidth.max - bwidth.min \leq accuracy\_threshold$}
+    \LState $missingTests \gets False$
+  \EndIf
+  \If{$bwidth.max \geq 2^{32}$}
+    \LState $flow \gets 2^{32} - 1$
+  \Else
+    \LState $flow \gets (bwidth.min + bwidth.max) / 2$
+  \EndIf
+  \LState $h(x) \gets RandomValue$
+  \LState $response \gets sendFakePayment(route = [route, target], h(x), flow)$
+  \If{$response = UnknownPaymentHash$}
+    \If{$bwidth.min < flow$}
+      \LState $bwidth.min \gets flow$
+    \EndIf
+  \ElsIf{$response = InsufficientFunds$}
+    \If{$bwidth.max > flow$}
+      \LState $bwidth.max \gets flow$
+    \EndIf
+  \EndIf
+  \If{$bwidth.min = 2^{32} - 1$}
+    \LState $newTarget \gets route.pop()$
+    \LState $route \gets route.push(target)$
+    \LState $bwidthBA \gets twowayProbing(route, newTarget, bwidth.min, 0, accuracy\_treshold)$
+    \LState $bwidth.min \gets channelCapacity - bwidthBA.max$
+    \LState $bwidth.max \gets channelCapacity - bwidthBA.min$
+    \LState $missingTests \gets False$
+  \EndIf
+\EndWhile
+\State \textbf{return} $bwidth$
+\end{algorithmic}
+\end{algorithm}
+
+### Payment correlation
 
 The second set of testing scenarios to be run on the test cluster will consider payment correlation. We will first confirm payment correlation in our test cluster, using the hash for the secret preimage, which remains the same throughout the entire payment route. By using two collaborating nodes on a payment path, they both can monitor the HTLC's for the same hash. In doing so it's possible to connect the sender with the receiver in situations where the collaborating nodes are the entry relay and exiting relay of a route. This passive payment correlation is similar to passive traffic-analysis used for end-to-end correlation in Tor networks. We will also assess the feasibility of using other parameters for payment correlation like expiry and payment amounts.
 
@@ -143,9 +186,15 @@ Subsequently we will try to use active payment correlation. By delaying Sphinx p
 
 Both passive and active payment correlation will both be evaluated in our test cluster and in Lightning Network running on Bitcoin Mainnet to assess whether our attacks are robust against the noise added by a full scale production network.
 
-## Mitigations
+### Mitigations
 
 The improved BDA and the Payment correlation attack are attacks on value privacy and relationship anonymity. Based on our analysis of these attacks we will suggest and develop countermeasures. When possible we will include the countermeasures in our analysis to measure the effect. Countermeasures can take the form of suggesting improvements that make it impossible to leak information, or, when the protocol requires us to leak information to a certain extent, add noise to the information in a way that insures differential privacy.
+
+## Data Analysis
+
+The 1ML data will be used as a sample of the population of LN nodes to determine the proportion of the different LN clients in the network. To determine the confidence interval we will apply a Correction Factor for Finite Populations (FPCF) because the population size is small (less than 1 million) and the sample size represents more than 5% of the population. The results of this analysis are already available and are summarized in appendix C.
+
+We will measure this impact by means of increased $\varepsilon$-differential privacy and decreased taint resistance.
 
 <div>
 <!-- 
@@ -189,16 +238,6 @@ https://www.coursera.org/learn/formal-concept-analysis
 NOTES: 2019-12-18
 http://acqnotes.com/acqnote/careerfields/5-steps-in-the-reasearch-process
 
-Link objectives to value privacy and relationship anonymity.
-
-3rd objective: Propose mitigations
-
-2nd point for mitigation in hypothesis
-
 Put in the algorithm
-
-Create a diagram for the research
-
-No references in the summary
 -->
 </div>
