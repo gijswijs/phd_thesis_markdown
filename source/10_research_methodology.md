@@ -205,6 +205,9 @@ Hijacking Routes in Payment Channel Networks : A Predictability Tradeoff
 Anonymous Multi-Hop Locks for Blockchain Scalability and Interoperability
 Split Payments in Payment Networks
 Sprites and State Channels: Payment Networks that Go Faster than Lightning
+Privacy-Utility Tradeoffs in Routing Cryptocurrency over Payment Channel Networks
+Foundations of State Channel Networks
+Towards Secure and Efficient Payment Channels
 
 Mimblewimble?
 
