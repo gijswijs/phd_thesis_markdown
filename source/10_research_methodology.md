@@ -1,13 +1,15 @@
 # Research Methodology
 
-Our research is quantitative in nature and therefor uses an experimental approach. An overview of the methodology is provided below and subsequently explained in more detail.
+Our research is quantitative in nature and therefor uses an experimental approach. An overview of the methodology is provided below (See [@fig:method]) and subsequently explained in more detail.
 
+<div id="fig:method">
 \tikzset{
-    align=center, node distance=1cm,
+    auto,
+    node distance=0.5cm,
     arrow/.style ={thick,->,>=stealth},
-    process/.style={rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, text width=3cm},
-    title/.style={text centered, text width=3cm, minimum width=3cm, align=right, font=\bfseries},
-    row/.style={text centered, text width=3cm, minimum width=3cm, align=left, font=\bfseries}
+    process/.style={rectangle, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, text width=2.5cm, font=\footnotesize},
+    title/.style={text centered, text width=2.5cm, minimum width=2.5cm, align=right, font=\bfseries \footnotesize},
+    row/.style={text centered, text width=2.5cm, minimum width=2.5cm, align=left, font=\bfseries \footnotesize}
 }
 \begin{tikzpicture}[]
 
@@ -28,8 +30,8 @@ Our research is quantitative in nature and therefor uses an experimental approac
 \node (bda) [title, above = of a] {Value\\Privacy};
 \node (pc) [title, above = of c] {Payment Correlation};
 
-\node (analysis) [row, left = of l, xshift=1cm] {Data Analysis};
-\node (data) [row, above = of analysis, yshift=6.5cm] {Data Collection};
+\node (analysis) [row, left = of l] {Data Analysis};
+\node (data) [row, above = of analysis, yshift=6.5cm] {Data\\Collection};
 
 \draw [arrow] (a) -- (b);
 \draw [arrow] (a) -- (e);
@@ -49,6 +51,9 @@ Our research is quantitative in nature and therefor uses an experimental approac
 
 \end{tikzpicture}
 
+Schematic representation of the research methodology
+</div>
+
 ## Data Collection
 
 In order to research whether interactions between different LN client software implementations play a role, we must first determine which LN clients are available. By determining the network share of each client type, we are able to determine the most important clients. We will then create a wrapper for each client to make it possible to control each client through their respective API's in a uniform way. Those clients are then used to run a local testing cluster of LN nodes. On the testing cluster we will run test scenario's to evaluate BDA and payment correlation algorithms and their mitigations.
@@ -56,6 +61,8 @@ In order to research whether interactions between different LN client software i
 ### Extract 1ML data
 
 We will use 1ML to estimate respective proportions of each client in LN. We will choose the three top LN clients with the largest network share for analysis in our local test cluster.
+
+\FloatBarrier
 
 ### Client Wrapper
 
